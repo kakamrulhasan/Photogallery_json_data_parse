@@ -17,17 +17,19 @@ class DetailsScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.only(top: 79,right: 26,left: 26,),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.network(detail.url),
-            Column(
-              children: [
-                Text(detail.title),
-                Text('ID:' + detail.id.toString()),
-              ],
+            Padding(
+              padding: const EdgeInsets.only(top: 25),
+              child: Column(
+                children: [
+                  Text('Title:  '+detail.title),
+                  Text('ID: ' + detail.id.toString()),
+                ],
+              ),
             )
           ],
         ),
